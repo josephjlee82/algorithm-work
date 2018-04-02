@@ -12,3 +12,8 @@ range_numbers = range_numbers.to_i
 for i in 1..num_numbers do
   file_handle.puts(rand(range_numbers))
 end
+
+
+# create a method to create a random ordered list
+# create a method to create an already sorted list
+# create a method to create a reverse orderd list

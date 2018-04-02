@@ -7,14 +7,17 @@ File.foreach( file_name ) do |line|
 end
 # ---- sort algorithm code below
 
-for x in 1..(a.length-1)
-  key = a[x]
-  y = x-1
-  while (key < a[y]) && (y >= 0)
-      a[y+1] = a[y]
-      a[y] = key
-      y = y-1
+for x in 0..(a.length-1)
+  low = x
+  y = x+1
+  for y in x..(a.length-1)
+    if a[y] < a[low]
+      low = y
+    end
   end
+  temp = a[x]
+  a[x] = a[low]
+  a[low] = temp
 end
 
 puts a.join("\n")
